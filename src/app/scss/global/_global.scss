@@ -1,0 +1,340 @@
+/* Content List */
+/***************/
+// 1.Document
+// 2.Text
+// 3.Multimedia
+// 4.Tables
+// 5. Form
+/**************/
+
+
+
+/*  BASE */
+
+#app {
+    font-family: $font-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: $white;
+  }
+  *,
+  ::before,
+  ::after {
+  box-sizing: border-box;
+  }
+  
+  html {
+  scroll-behavior: smooth;
+  }
+  /*1.  Document*/
+  
+  *::before,
+  *::after {
+      box-sizing: border-box;
+  }
+  html {
+      font-family: $font-family;
+      line-height: $line-height-base;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      font-size: 0.8rem;
+  
+      @include media-breakpoint-up(sm) {
+        html {
+          font-size: 0.9rem;
+        }
+      } 
+  
+  
+      @include media-breakpoint-up(md) {
+        html {
+          font-size: 1rem;
+            .biggest-font-size {
+            font-size: 4rem;
+            }
+  
+            .small-font-size {
+                font-size: 0.875rem;
+            }
+            .smaller-font-size {
+                font-size:0.813rem;
+            }
+        }
+      } 
+  
+  }
+  
+  
+  
+  
+  
+  //  Tipography
+  body, * {
+      font-family: $font-family;
+      line-height: $line-height-base;
+      font-size: $font-size-base;
+      color: $grey-5;
+      padding:0;
+      margin:0;
+    
+  
+      h1, h2, h3, h4, h5, h6, p, span, i, button, div, section, a, article, input, textarea {
+          font-family: $font-family;
+          line-height: $line-height-base;
+      }
+  
+      .header-height {
+          height: 3rem;
+      };
+      .d-flex {
+          display:flex;
+          width: 100%;
+      }
+  
+    }
+
+    body {
+        height: 100vh;
+        margin: 0;
+        background-image: url("/src/app/img/landing.jpg");
+        background-repeat: repeat;
+        background-position: 50% 50%;
+        background-size:cover  ;
+     
+        .wrapper {
+            z-index:0;
+            width:100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom,$blue,$red-6);
+            opacity: .6;
+         
+            
+            @include media-breakpoint-up(xs) {
+                    background-repeat-y: repeat;
+                    min-height: 1360px;
+            } 
+            @include media-breakpoint-up(sm) {
+                    background-repeat-y: repeat;
+                    min-height: 1260px;
+            } 
+            @include media-breakpoint-up(lg) {
+                    background-repeat-y: no-repeat;
+                    min-height: auto;
+            } 
+
+
+
+          }
+    }
+  
+  
+  
+  /* 3.Multimedia*/
+  
+  
+  
+  /* 4.Tables*/
+  /* 5. Form*/
+  
+  button {
+      border-radius: 0;
+  }
+  
+  button:focus {
+      outline: none;
+      outline:none;
+  }
+  
+  input,
+  button,
+  select,
+  optgroup,
+  textarea {
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+  }
+  
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+      -webkit-appearance: button;
+  }
+  
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled) {
+      cursor: pointer;
+  }
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+      padding: 0;
+      border-style: none;
+  }
+  
+  
+  
+  .custom-btn {
+     @include btn-sod();
+  }
+  .custom-btnic {
+     @include btnic-sod();
+  }
+  
+
+  
+  .select2-container  {
+    min-width: 250px;
+    width: 100% !important;
+    .select2-dropdown {
+      .select2-search {
+        padding: 0.5rem;
+        input  {
+          outline: none;
+            @include input-close-sod();
+            display: block;
+            width: 100%;
+            height: calc(2.25rem + 2px);
+            padding: 0.375rem 2.5rem 0.375rem 1rem;
+            font-size: 0.85rem;
+            line-height: $line-height-base;
+            color: $grey-55;
+            background-color: $white;
+            background-clip: padding-box;
+            border: 1px solid $grey-38;
+            @include radius($border-top-left: 0.25rem, $border-top-right: 0.25rem, $border-bottom-left: 0.25rem, $border-bottom-right: 0.25rem);
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            &:before {
+              font-family: "Font Awesome 5 Solid";
+              content: '\f002';
+              position: absolute;
+              right: 0.8rem;
+              top: 0.5rem;
+              font-weight: 600;
+              }
+              
+                &:focus {
+                    color: $blue;
+                    background-color: $white;
+                    border-color: $blue;
+                    outline: 0;
+                    @include box-shadow($top: 0, $left: 0, $blur: 0.2rem, $color:rgba(30,34,170,0.5), $inset: "");
+                }
+  
+        }
+      }
+      .select2-results {
+        padding: 0;
+      }
+    }
+  }
+  
+  
+  .select2-container .select2-dropdown .select2-results ul {
+    list-style: none;
+    text-transform: capitalize;
+  
+    .select2-results__option:nth-child(even) {
+        background: $grey-5
+    }
+  
+    .select2-results__option:nth-child(odd) {
+        background: $white
+    }
+  
+    .select2-results__option {
+        border-bottom: 1px solid $grey-5;
+        position: relative;
+        padding-right: 2.5rem;
+  
+  
+        &:hover {
+            background: rgba(255, 167, 38, 0.2);
+  
+            &:before {
+                content: ' ';
+                font-family: $font-family-fontawesome;
+                font-size: 0.9rem;
+                color: $primary;
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                font-weight: 800;
+            }
+        }
+    }
+  
+    .select2-results__option:first-child {
+        &:hover {
+            background: $white;
+        }
+    }
+  
+    .select2-results__option:last-child {
+        border-bottom: none;
+    }
+  }
+  
+    .select2-container--default .select2-results > .select2-results__options {
+        &::-webkit-scrollbar-track {
+            @include box-shadow($top: 0.3rem, $left: 0.3rem, $blur: 0.5rem, $color: rgba(0,0,0,.025), $inset: "");
+            background-color: $grey-15;
+        }
+  
+        &::-webkit-scrollbar {
+            width: 0.275rem;
+            background-color: $grey-15;
+        }
+  
+        &::-webkit-scrollbar-thumb {
+            @include box-shadow($top: 0.3rem, $left: 0.3rem, $blur: 0.5rem, $color: rgba(0,0,0,.025), $inset: "");
+            background-color: $grey-35;
+        }
+    }
+  
+    .select2-container .select2-dropdown .select2-results ul .select2-results__option--highlighted[aria-selected] {
+        color: $primary;
+  
+        &:before {
+            content: '\f00c';
+            font-family: $font-family-fontawesome;
+            font-size: 0.9rem;
+            color: $primary;
+            position: absolute;
+            right: 1rem;
+            top: 0.5rem;
+            font-weight: 800;
+        }
+    }
+  
+  .select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single, .select2-container--default.select2-container--focus .select2-selection--multiple {
+    height: 2.4750rem;
+    background-color: transparent;
+  }
+  
+.big-drop {
+    width: 600px !important;
+}
+
+
+.custom-input {
+    @include input-close-sod();
+}
+
+.custom-alert {
+    @include alert-sod();
+}
+  
+  

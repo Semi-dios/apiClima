@@ -1,0 +1,132 @@
+/* CONTENT LIST */
+/***************/
+//1. Web
+/**************/
+//1.1 Landing
+//1.1.1 Modal
+//1.2 History
+
+/* 1. Web */
+//*********
+
+/* 1.1 Landing */
+
+#viewLanding {
+  
+
+    .card {
+        color:$white;
+        @include radius();
+        display: block;
+       
+        position: relative;
+        align-items: left;
+        width: 100%;
+        background-image: linear-gradient(387deg, $black 0%, $grey-75 100%);
+        .main-content {
+            text-align: -webkit-center;
+            text-align: center;
+        }
+
+        .card-content {
+            margin: 1.5rem;
+            text-align: left;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            margin-block-end: 0px;
+            color: $white;
+            padding: 1.5rem;
+        }
+
+        &.hydrogen-card {
+          background-color: $black;
+          @include radius();
+          background-image: linear-gradient(387deg, $black 0%, $grey-75 100%);
+          border-color: $grey-70;
+          border-width: 1.5px;
+        }
+        .chip {
+            border-color: $grey-70;
+            border-width: 1.5px !important;
+            border-style: solid;
+            @include radius(0.2rem,0.2rem,0.2rem,0.2rem);
+            text-align: center;
+            font-size: 0.9rem;
+            padding: 0.1rem;
+        }
+
+           .wi-icon {
+            fill:$grey-10;
+            height: 1rem;
+            width: 1rem;
+          }
+          
+          .wi-value {
+              font-size: 0.8rem;
+              display: inline-flex;
+              margin-left: 1rem;
+          }
+
+        
+          
+          .temperature {
+            text-align: end;
+            span {
+                font-size: 3rem;
+                
+            }
+          }
+          
+          .rain-icon {
+            height: 100px;
+            width: 100px;
+            cursor: pointer
+          }
+
+          .map {
+            @include radius();  
+            > div {
+                > div {
+                    @include radius();  
+                }
+            } 
+          }
+        
+    }
+     
+    .weather {
+      text-align:center;
+    }
+    
+    .weather-description {
+          margin: 0.5rem;
+        display: block;
+        color: $grey-10;
+        font-size: 0.85rem;
+    }
+    
+    .main {
+      margin: 2rem;
+    }
+
+
+}
+
+
+
+
+
+/* 1.2 History*/
+
+#viewHistory {
+    @extend #viewLanding;
+    .content-table {
+      @include media-breakpoint-up(sm) {
+          overflow: scroll;
+      }
+    }
+  
+  
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+/* @import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~@fortawesome/fontawesome-free/css/brands.css';
+@import '~@fortawesome/fontawesome-free/css/solid.css';
+@import '~@fortawesome/fontawesome-free/css/regular.css'; */
+
+
+@import './global/variables';
+
+
+@import './mixin/mixin';
+
+@import './global/global';
+
+
+/* Styles */
+
+
+@import './app/nav';
+@import './app/main';
+
+
+
